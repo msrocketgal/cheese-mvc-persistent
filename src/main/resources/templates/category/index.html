@@ -14,17 +14,9 @@
 <p th:unless="${categories} and ${categories.size()}">no categories :(</p>
 
 
-<table class="table">
-
-    <tr>
-        <th>Name</th>
-    </tr>
-
-    <tr th:each="category : ${categories}">
-        <td th:text="${category.name}"></td>
-    </tr>
-
-</table>
+<ul th:each="category : ${categories}">
+    <li th:text="${category.name}"></li>
+</ul>
 
 </body>
 </html>
