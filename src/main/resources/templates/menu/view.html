@@ -6,7 +6,9 @@
 
 <h1 th:text="${title}">Default Title</h1>
 
-<p th:unless="${menu.cheeses} and ${menu.cheeses.size()}">no cheeses found for this menu :(</p>
+<nav th:replace="fragments :: navigation"></nav>
+
+<p th:unless="${menu.cheeses} and ${menu.cheeses.size()}">No Cheese Found for this Menu!</p>
 
 <ul th:each="cheese : ${menu.cheeses}">
     <li th:text="${cheese.name}"></li>

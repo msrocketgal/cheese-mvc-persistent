@@ -8,7 +8,7 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 
-<p th:unless="${cheeses} and ${cheeses.size()}">no cheese :(</p>
+<p th:unless="${cheeses} and ${cheeses.size()}">No Cheeses Found!</p>
 
 
 <table class="table">
@@ -26,6 +26,11 @@
     </tr>
 
 </table>
+
+<nav th:fragment="navigation">
+    <a href="/cheese/add">Add</a> |
+    <a href="/cheese/remove">Remove</a>
+</nav>
 
 </body>
 </html>
